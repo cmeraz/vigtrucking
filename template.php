@@ -16,8 +16,36 @@
  * Implements template_preprocess_page
  *
  */
-//function vigtrucking_preprocess_page(&$variables) {
-//}
+function vigtrucking_preprocess_page(&$variables) {
+
+  // Convenience variables
+  if (!empty($variables['page']['sidebar_first'])){
+    $left = $variables['page']['sidebar_first'];
+  }
+
+  if (!empty($variables['page']['sidebar_second'])) {
+    $right = $variables['page']['sidebar_second'];
+  }
+
+  // Dynamic sidebars
+  if (!empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'large-6 push-3';
+    $variables['sidebar_first_grid'] = 'large-3 pull-6';
+    $variables['sidebar_sec_grid'] = 'large-3';
+  } elseif (empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'large-9';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = 'large-3';
+  } elseif (!empty($left) && empty($right)) {
+    $variables['main_grid'] = 'large-9 push-3';
+    $variables['sidebar_first_grid'] = 'large-3 pull-9';
+    $variables['sidebar_sec_grid'] = '';
+  } else {
+    $variables['main_grid'] = 'large-12';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = '';
+  }
+}
 
 /**
  * Implements template_preprocess_node
