@@ -1,5 +1,5 @@
-name = vigtrucking
-description = Custom sub-theme based on the the Zurb Foundation base theme.
+name = VIG Trucking & Equipment
+description = Tema de Drupal 7 para la empresa VIG Trucking, basado en Zurb Foundation theme.
 screenshot = images/screenshot.png
 
 core = 7.x
@@ -82,13 +82,13 @@ regions[featured]            = Featured
 regions[content]             = Content
 regions[sidebar_first]       = Left Sidebar
 regions[sidebar_second]      = Right Sidebar
-regions[triptych_first]      = Callout one
-regions[triptych_middle]     = Callout two
-regions[triptych_last]       = Callout three
+regions[location]            = Location
+regions[clients]             = Clientes
+regions[contact]             = Contacto
+regions[map]                 = Mapa
 regions[footer_firstcolumn]  = Footer one
 regions[footer_secondcolumn] = Footer two
 regions[footer_thirdcolumn]  = Footer three
-regions[footer_fourthcolumn] = Footer four
 regions[footer]              = Footer
 
 ; Various page elements output by the theme can be toggled on and off. The
