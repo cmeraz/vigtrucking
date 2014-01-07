@@ -88,7 +88,7 @@
 
   <!-- Call numbers information to clients -->
   <?php if (!empty($page['call_info'])): ?>
-    <section id="contact-info">
+    <section id="contact-info" class="row">
       <?php print render($page['call_info']); ?>
     </section>
   <?php endif ?>

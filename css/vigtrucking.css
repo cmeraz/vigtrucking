@@ -595,7 +595,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 71.42857em;
+  max-width: 85.71429em;
   *zoom: 1;
 }
 /* line 121, ../../../../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
@@ -4973,7 +4973,7 @@ label.error {
 
   /* line 412, ../../../../../../../../../var/lib/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 71.42857em;
+    max-width: 85.71429em;
     margin: 0 auto;
     margin-bottom: 0;
   }
