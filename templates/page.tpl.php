@@ -164,7 +164,7 @@
 <!-- Featured Section Site
 ==================================-->
 <?php if (!empty($page['featured'])): ?>
- <section id="featured row">
+  <section id="featured row">
     <?php print render($page['featured']); ?>
   </section> 
 <?php endif ?>
