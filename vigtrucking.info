@@ -82,6 +82,7 @@ regions[featured]            = Featured
 regions[content]             = Content
 regions[sidebar_first]       = Left Sidebar
 regions[sidebar_second]      = Right Sidebar
+regions[call_info]           = Call Info
 regions[location]            = Location
 regions[clients]             = Clientes
 regions[contact]             = Contacto
