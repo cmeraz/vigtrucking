@@ -7358,3 +7358,8 @@ a.th {
 .item-list .pager li {
   padding: 0;
 }
+
+/* line 3, ../scss/layout/_header.scss */
+.l-header {
+  padding-top: 20px;
+}
