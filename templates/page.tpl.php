@@ -258,7 +258,7 @@
 <!-- Clients Section
 ==================================-->
 <?php if (!empty($page['clients'])): ?>
-  <section id="clients">
+  <section id="clients" class="row">
     <?php print render($page['clients']); ?>
   </section>   
 <?php endif ?> 
