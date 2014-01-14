@@ -135,6 +135,7 @@
         </div>
       </div>
     <?php endif; ?><!-- End title, slogan and menu -->
+
   </section>
 
   <!--.l-header-region -->
@@ -166,16 +167,30 @@
   </section> 
 <?php endif ?>
  
-<?php if ($breadcrumb): ?>
-  <section class="row">
-    <div class="large-12 column">
-      <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-    </div>
-  </section>
-<?php endif ?>
+
 
 <!-- Main Content Section Site
 ==================================-->
+<section class="content-header row">
+  
+  <!-- site's title -->
+  <?php if ($title && !$is_front): ?>
+    <?php print render($title_prefix); ?>
+    <div class="large-12 columns">
+      <h1 id="page-title" class="title"><?php print $title; ?></h1>
+      <?php print render($title_suffix); ?>
+    </div>
+  <?php endif; ?>    
+      
+  <!-- breadcumbs -->
+  <?php if ($breadcrumb): ?>
+    <div class="large-12 column">
+      <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+    </div>
+  <?php endif ?>
+
+</section>
+
 <main role="main" class="row l-main">
   <div class="<?php print $main_grid; ?> main columns">
     <?php if (!empty($page['highlighted'])): ?>
@@ -185,13 +200,7 @@
     <?php endif; ?>
     <a id="main-content"></a>
 
-    <?php if ($title && !$is_front): ?>
-      <?php print render($title_prefix); ?>
-        <h1 id="page-title" class="title">
-          <?php print $title; ?>
-        </h1>
-      <?php print render($title_suffix); ?>
-    <?php endif; ?>
+    
     
     <?php if ($messages && !$zurb_foundation_messages_modal): ?>
     <!--/.l-messages -->
@@ -299,7 +308,7 @@
     </section>
     <!--/.footer-columns-->
     <?php endif; ?>
-    <section class="low-footer row">
+    <section class="low-footer ">
       <?php if (!empty($page['footer'])): ?>
         <div class="footer large-12 columns">
           <?php print render($page['footer']); ?>
