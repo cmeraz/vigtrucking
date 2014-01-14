@@ -276,11 +276,11 @@
 
 <!-- Footer Section
 ==================================-->
-<footer class="l-footer row" role="contentinfo">
+<footer class="l-footer" role="contentinfo">
     
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
     <!--.footer-columns -->
-    <section class="row l-footer-columns">
+    <section class="l-footer-columns row">
       <?php if (!empty($page['footer_firstcolumn'])): ?>
         <div class="footer-first large-4 columns">
           <?php print render($page['footer_firstcolumn']); ?>
@@ -299,18 +299,19 @@
     </section>
     <!--/.footer-columns-->
     <?php endif; ?>
+    <section class="low-footer row">
+      <?php if (!empty($page['footer'])): ?>
+        <div class="footer large-12 columns">
+          <?php print render($page['footer']); ?>
+        </div>
+      <?php endif; ?>
 
-  <?php if (!empty($page['footer'])): ?>
-    <div class="footer large-12 columns">
-      <?php print render($page['footer']); ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if ($site_name) :?>
-    <div class="copyright large-12 columns">
-      &copy; <?php print date('Y') . ' ' . check_plain($site_name) . ' ' . t('All rights reserved.'); ?>
-    </div>
-  <?php endif; ?>
+      <?php if ($site_name) :?>
+        <div class="copyright large-12 columns">
+          &copy; <?php print date('Y') . ' ' . check_plain($site_name) . ' ' . t('All rights reserved.'); ?>
+        </div>
+      <?php endif; ?>
+    </section>
 
 </footer>
 <!--/.footer-->
