@@ -168,11 +168,12 @@
  
 <?php if ($breadcrumb): ?>
   <section class="row">
-    <div class="large-12 column>
+    <div class="large-12 column">
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
     </div>
   </section>
 <?php endif ?>
+
 <!-- Main Content Section Site
 ==================================-->
 <main role="main" class="row l-main">
