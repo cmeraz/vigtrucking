@@ -127,13 +127,10 @@
           <?php if ($alt_main_menu): ?>
             <nav id="main-menu" class="navigation" role="navigation">
               <?php print ($alt_main_menu); ?>
+              <?php if ($alt_secondary_menu): ?>
+                <?php print $alt_secondary_menu; ?>
+              <?php endif; ?>
             </nav> <!-- /#main-menu -->
-          <?php endif; ?>
-
-          <?php if ($alt_secondary_menu): ?>
-            <nav id="secondary-menu" class="navigation" role="navigation">
-              <?php print $alt_secondary_menu; ?>
-            </nav> <!-- /#secondary-menu -->
           <?php endif; ?>
         </div>
       </div>
@@ -153,8 +150,8 @@
       <?php if (!empty($page['header'])): ?>
         <?php print render($page['header']); ?>
       <?php endif; ?>
-      
     </div>
+
   </section>
   <!--/.l-header-region -->
   
@@ -169,6 +166,13 @@
   </section> 
 <?php endif ?>
  
+<?php if ($breadcrumb): ?>
+  <section class="row">
+    <div class="large-12 column>
+      <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+    </div>
+  </section>
+<?php endif ?>
 <!-- Main Content Section Site
 ==================================-->
 <main role="main" class="row l-main">
@@ -179,8 +183,6 @@
       </div>
     <?php endif; ?>
     <a id="main-content"></a>
-
-    <?php if ($breadcrumb): print $breadcrumb; endif; ?>
 
     <?php if ($title && !$is_front): ?>
       <?php print render($title_prefix); ?>
