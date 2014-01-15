@@ -167,8 +167,6 @@
   </section> 
 <?php endif ?>
  
-
-
 <!-- Main Content Section Site
 ==================================-->
 <section class="content-header row">
@@ -191,6 +189,7 @@
 
 </section>
 
+<!-- main content -->
 <main role="main" class="row l-main">
   <div class="<?php print $main_grid; ?> main columns">
     <?php if (!empty($page['highlighted'])): ?>
@@ -200,8 +199,6 @@
     <?php endif; ?>
     <a id="main-content"></a>
 
-    
-    
     <?php if ($messages && !$zurb_foundation_messages_modal): ?>
     <!--/.l-messages -->
       <section class="l-messages row">
@@ -308,7 +305,7 @@
     </section>
     <!--/.footer-columns-->
     <?php endif; ?>
-    <section class="low-footer ">
+    <section class="low-footer row">
       <?php if (!empty($page['footer'])): ?>
         <div class="footer large-12 columns">
           <?php print render($page['footer']); ?>
