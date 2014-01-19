@@ -93,7 +93,7 @@
     </section>
   <?php endif ?>
 
-  <section id="navigation">
+  <section id="navigation" class="hide-small">
 
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
