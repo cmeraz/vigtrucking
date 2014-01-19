@@ -1,6 +1,32 @@
 // Non-modular or client styles for .l-footer region.
 
 
-.l-footer {}
+.l-footer {
+  background-color: #2c2d2d;
+  color: #797e80;  
+  margin-top: 0;
+  padding: ($global-margin * 2) 0;
+  border-top: 2px solid black;
+
+  h3 {
+    color: #fff;
+  }
+
+  a{
+    color: #797e80;
+    @include transition-property(color);
+    @include transition-duration(600ms);
+    &:hover {
+      color: #f25c24;
+    }  
+  }
+}
+
+.contact-info {
+  li {
+    list-style: none;
+  }
+}
+
 .l-footer-columns {}
 

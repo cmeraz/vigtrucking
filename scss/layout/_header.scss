@@ -1,7 +1,10 @@
+// Variables
+$border-nav: 1px solid lighten(gray, 35%);
+
 // Non-modular or client styles for .l-header region.
 
 .l-header {
-	padding-top: 20px;
+	padding-top: emCalc(8px);
 }
 
 // Top Bar
@@ -13,3 +16,102 @@
 .top-bar-section {}
 .top-bar-section .left {}
 .top-bar-section .right {}
+
+// Header
+//--------------------------------------------------
+
+.language-switcher-locale-url {
+  @include inline-list;
+}
+
+header {
+  color: #fff;
+  margin-bottom: $global-margin * 2;
+  height: emCalc(500px);
+  background: url("../images/highway.jpg") center;
+}
+
+.language-switcher-locale-url {
+  position: relative;
+
+  a {
+    color: #FFF;
+    border: 1px solid white;
+    padding: emCalc(8px);
+    @include border-radius;
+    @include transition-property(all);
+    @include transition-duration(800ms);
+
+    &:hover {
+      background-color: #f25c24;
+      background-color: rgba(#f25c24, 0.75);
+    }
+  }
+/*
+  .es a:before {
+    position: absolute;
+    content:""; 
+    left: emCalc(25px);
+    top: emCalc(2px);
+    width: 32px;  
+    height: 32px;
+    float: left;
+    @include icons-sprite(mexico);
+  }
+*/
+}
+
+.contact-lines {
+  font-size: emCalc(20px);
+  font-weight: bold;
+  @include text-shadow;
+}
+
+#navigation {
+  @extend .box-shadow;
+  padding: emCalc($global-margin) 0;
+  margin: emCalc($global-margin) 0;
+  border-top: $border-nav;
+  border-bottom: $border-nav;
+  @include opacity(0.9);
+
+  .li {
+    padding: emCalc($global-margin);
+  }
+}
+
+nav {
+   text-align: right;
+   // Position the links aligned in place
+  .links{
+    text-align: right;
+    display: block;
+    float: left;
+    margin-right: emCalc($global-margin + 5);
+
+      a {
+        font-size: emCalc(16px);
+        color: black;
+        padding: emCalc($global-margin - 5) emCalc(15px);
+        @include transition(background-color 0.3s);
+        @include border-radius(8px);
+
+        &:hover {
+          color: #fff;
+          background-color: lighten($primary-color, 25%);
+        }
+      }
+  }
+  
+  // Sets position and margin top
+  #main-menu-links,
+  #secondary-menu-links {
+    position: relative;
+    top: emCalc($global-margin * 2);
+  }
+
+}
+
+#featured {
+  border-top: $border-nav;
+}

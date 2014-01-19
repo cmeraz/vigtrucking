@@ -1,8 +1,48 @@
 // Non-modular or client styles for the .l-content region.
 
-.l-main {}
+.l-main {
+  margin-top: 0;
+  padding: ($global-margin) 0;
+
+  .block {
+    @extend .box-shadow;
+    padding: $global-margin;
+  }
+
+  .block-title {
+    margin-bottom: $global-margin;
+    border-bottom: 1px dotted #757A7C;
+  }
+
+}
+
+.main {
+  @extend .box-shadow;
+
+  ul {
+    margin-left: $global-margin * 3;
+  }
+}
+
+// Page Title
+.content-header {
+  background-color: #5DACE9;
+  margin-bottom: 0; 
+  border-bottom: 3px solid black;
+}
+
+#page-title {
+    color: #fff;
+}
 
 .node {}
 .body {}
 .image {}
 .breadcrumb {}
+
+#clients {
+  background-color: #e0e4e7;
+  padding: ($global-margin * 2) 0;
+  margin-bottom: $global-margin * 2;
+  border: 1px solid #e0e4e7;
+}

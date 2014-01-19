@@ -7,8 +7,17 @@
 
 // Headings
 //------------------------------------------
-// h1, h2, h3,
-// h4, h5, h6 {}
+ h1, h2, h3,
+ h4, h5, h6 {
+
+  small {
+    display: block;
+    margin-top: $global-margin;
+    margin-bottom: $global-margin * 2;
+  }
+
+ }
+
 
 // Anchors
 //-----------------------------------------------------------------------------
@@ -57,3 +66,73 @@
 // }
 
 // select {}
+
+
+.site-slogan {
+  font-size: emCalc(38);
+  color: #fff;
+  text-align: center;
+  margin: emCalc($global-margin) 0;
+  @include text-shadow;
+}
+
+.description {
+  padding: emCalc(12px) emCalc($global-margin * 3);
+  font-size: emCalc(16px);
+}
+
+.title {
+  font-size: $h1-font-size * 1.25;
+}
+
+.menu {
+  list-style: none;
+ 
+  li > a:before {
+    text-weight: bold;
+    content: "> ";
+  }
+ }
+
+.box-shadow {
+  background-color: #FFF;
+  padding: $global-margin * 2;
+  margin-bottom: $global-margin * 2;
+  border-top: 3px solid black;
+  border-bottom: 3px solid #ced6db;
+  @include box-shadow(#AFAFAF 0  0 12px);
+}
+
+.sidebar {
+  padding-right: 0;
+}
+
+.breadcrumbs {
+  font-weight: bold;
+  background-color: #5C5146;
+  color: #FFF;
+  border: none;
+  @include border-radius(0);
+  @include opacity(0.9);
+
+  li > a {
+    font-weight: bold;
+    color: #FFF;
+    @include transition-property(color);
+    @include transition-duration(600ms);
+
+    &:hover {
+      color: #DDC896;
+      text-decoration: none !important;
+    }
+
+  }
+}
+
+.current  a {
+  color: #DDC896 !important;
+
+  &:hover {
+    color: #FFF !important;
+  }
+}
