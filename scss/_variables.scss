@@ -189,7 +189,7 @@ $total-columns: 12;
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #4f5e62;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -719,12 +719,12 @@ $small-font-size: 60%;
 
 // We use this to control the margins and padding of the inline list.
 
-// $inline-list-top-margin: 0;
-// $inline-list-opposite-margin: 0;
-// $inline-list-bottom-margin: emCalc(17);
-// $inline-list-default-float-margin: emCalc(-22);
+$inline-list-top-margin: 0;
+$inline-list-opposite-margin: 0;
+$inline-list-bottom-margin: emCalc(17);
+$inline-list-default-float-margin: emCalc(-50);
 
-// $inline-list-padding: 0;
+$inline-list-padding: 0;
 
 // We use this to control the overflow of the inline list.
 
@@ -1223,12 +1223,12 @@ $small-font-size: 60%;
 // $thumb-border-width: 4px;
 // $thumb-border-color: #fff;
 // $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+$thumb-box-shadow-hover: 0 0 12px 1px #AFAFAF;
 
 // Radius and transition speed for thumbs
 
 // $thumb-radius: $global-radius;
-// $thumb-transition-speed: 200ms;
+$thumb-transition-speed: 600ms;
 
 //
 // Tooltip Variables
