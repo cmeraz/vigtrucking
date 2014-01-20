@@ -162,8 +162,10 @@
 <!-- Featured Section Site
 ==================================-->
 <?php if (!empty($page['featured'])): ?>
-  <section id="featured" class="row">
-    <?php print render($page['featured']); ?>
+  <section id="featured">
+    <div class="row">
+      <?php print render($page['featured']); ?>
+    </div>
   </section> 
 <?php endif ?>
  
@@ -267,8 +269,10 @@
 <!-- Clients Section
 ==================================-->
 <?php if (!empty($page['clients'])): ?>
-  <section id="clients" class="row">
-    <?php print render($page['clients']); ?>
+  <section id="clients">
+    <div class="row">
+      <?php print render($page['clients']); ?>
+    </div>
   </section>   
 <?php endif ?> 
 
