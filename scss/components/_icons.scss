@@ -12,6 +12,10 @@ $classPrefix: "foundicon-";
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
+
+  &.large {
+    font-size: emCalc(90px);
+  }
 }
 
 @mixin i-class($name,$pua) {
@@ -37,4 +41,81 @@ $classPrefix: "foundicon-";
     font-weight: normal;
     font-style: normal;
   }
+}
+
+
+/*--------------------------------------------*/
+/*  Global Style for icons
+/*--------------------------------------------*/
+a[href]:before,
+  button:before {
+    font-family: "foundation-icons";
+    font-size: emCalc(18);
+    font-weight: normal;
+    margin-right: 8px;
+  }
+
+button:before {
+  position: relative;
+  left: emCalc(-8px);
+  top: emCalc(1);
+}
+
+/*--------------------------------------------*/
+/*  Navigation Icons
+/*--------------------------------------------*/
+
+/*--- Home link ---*/
+a[title="Página de inicio"]:before,
+a[title="Frontpage"]:before {
+    content: "\f15a";
+}
+
+/*--- About US link ---*/
+a[title="Empresa"]:before,
+a[title="About us"]:before {
+  content: "\f200";
+}
+
+/*--- Services Link ---*/
+a[title="Servicios"]:before {
+  content: "\f215";
+}
+
+/*--- Account Link ---*/
+a[href="/mex/user"]:before,
+a[href="/usa/user"]:before {
+  content: "\f1fe";
+}
+  
+/*--- Logout link ---*/  
+a[href*="/user/logout"]:before {
+  content: "\f20a";
+}
+
+
+/*--------------------------------------------*/
+/*  Buttons Icons
+/*--------------------------------------------*/
+[value="Iniciar sesión"]:before {
+  content: "\f16a";
+}
+
+[value="Enviar"]:before,
+[value="Submit"]:before,
+[value="Send"] {
+  content: "\f16d";
+}
+
+/*--------------------------------------------*/
+/*  Main Section Icons
+/*--------------------------------------------*/
+.block-navigation li > a:before {
+  color: #797e80;
+  font-family: "foundation-icons";
+  font-weight: bold;
+  position: relative;
+  margin-right: 8px;
+  top: 2px;
+  content: "\f198";
 }
