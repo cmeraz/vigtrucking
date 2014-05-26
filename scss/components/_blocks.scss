@@ -6,3 +6,20 @@
 // Drupal sytem blocks:
 // .block-search {}
 // .block-system {}
+
+/*--------------------------------------------*/
+/*  Block Menu Items
+/*--------------------------------------------*/
+.menu a {
+  display: block;
+  padding: emCalc(5);
+
+  &:hover {
+    color: $header-font-color;
+    background-color: #f8f3f0;
+  }
+
+  &:before {
+    color: $header-font-color;
+  }
+}

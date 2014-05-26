@@ -7,6 +7,7 @@
  * created the file will be named app.scss. Thus this file is named,
  * THEMENAME.scss.
  *
+ *
  * This application file (THEMENAME.scss) is where all the partials are
  * imported.
  *
@@ -58,7 +59,8 @@
 // Components
 // @import "components/buttons";
 // @import "components/type";
-// @import "components/forms";
+// @import "components/forms";&
+@import "components/_blocks.scss";
 
 // Note about using Foundation Icons.
 // The "components/icons" partial is required for the icon sets to work.

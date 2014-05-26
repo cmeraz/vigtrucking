@@ -5,15 +5,21 @@
 // - Also, before adding styles be sure to modify variables in the
 //   "scss/_variables.scss" file. You may not need to write any code.
 
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
 // Headings
 //------------------------------------------
  h1, h2, h3,
  h4, h5, h6 {
+  /*--- Aply text shadow to headings ---*/
+  //text-shadow: -1px -1px 2px rgba(#000,0.3);
 
   small {
     display: block;
-    margin-top: $global-margin;
-    margin-bottom: $global-margin * 2;
+    font-weight: 400;
+    line-height: emCalc(24);  
   }
 
  }
@@ -21,13 +27,17 @@
 
 // Anchors
 //-----------------------------------------------------------------------------
-// a {}
+a {
+  color: #f25c24;
+}
 
 // a:focus {}
 
 // a.active,
 // a:active,
-// a:hover {}
+a:hover {
+  color: darken(#f25c24, 25%);
+}
 
 // Form Input
 //-----------------------------------------------------------------------------
@@ -68,31 +78,52 @@
 // select {}
 
 
+/*--------------------------------------------*/
+/*  Site Title
+/*--------------------------------------------*/
+.site-slogan {
+  background-color: rgba($primary-color, 0.8);
+  margin: emCalc($global-margin) auto;
+  padding: emCalc(3);
+  width: emCalc(250);
+}
 .site-slogan {
   font-size: emCalc(38);
   color: #fff;
   text-align: center;
-  margin: emCalc($global-margin) 0;
+  background-color: rgba($primary-color, 0.8);
+  margin: emCalc($global-margin) auto;
+  padding: emCalc(3);
+  width: emCalc(295);
   @include text-shadow;
+
+   @media #{$small-only} {
+      font-size: emCalc(38) * 0.6;
+      width: 100%;
+    }
 }
 
 .description {
-  padding: emCalc(12px) emCalc($global-margin * 3);
-  font-size: emCalc(16px);
+  font-weight: 200;
+  font-style: normal;
+  font-size: emCalc(18px);
+
+   @media #{$small-only} {
+      font-size: emCalc(14);
+    }
 }
 
 .title {
   font-size: $h1-font-size * 1.25;
+
+   @media #{$small-only} {
+      font-size: ($h1-font-size * 1.25) * 0.6;
+    }
 }
 
 .menu {
   list-style: none;
- 
-  li > a:before {
-    text-weight: bold;
-    content: "> ";
   }
- }
 
 .box-shadow {
   background-color: #FFF;
@@ -103,26 +134,22 @@
   @include box-shadow(#AFAFAF 0  0 12px);
 }
 
-.sidebar {
-  padding-right: 0;
-}
-
 .breadcrumbs {
   font-weight: bold;
-  background-color: #5C5146;
-  color: #FFF;
+  background-color: #fff;
+  color: $primary-color;
   border: none;
   @include border-radius(0);
   @include opacity(0.9);
 
   li > a {
     font-weight: bold;
-    color: #FFF;
+    color: $primary-color;
     @include transition-property(color);
     @include transition-duration(600ms);
 
     &:hover {
-      color: #DDC896;
+      color: darken($primary-color, 25%);
       text-decoration: none !important;
     }
 
@@ -135,4 +162,21 @@
   &:hover {
     color: #FFF !important;
   }
+}
+
+.subtitle {
+  font-size: emCalc(16);
+  font-family: $body-font-family;
+  font-weight: 100;
+  font-style: normal;
+  margin: $global-margin 0;
+}
+
+.pagination-centered {
+  @include grid-column(12);
+}
+
+.box {
+    @extend .box-shadow;
+    padding: $global-margin;
 }

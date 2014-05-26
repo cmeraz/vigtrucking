@@ -78,8 +78,15 @@ a[title="About us"]:before {
 }
 
 /*--- Services Link ---*/
-a[title="Servicios"]:before {
+a[title="Servicios"]:before,
+a[title="Services"]:before {
   content: "\f215";
+}
+
+/*--- Contact link ---*/
+a[title="Contacto"]:before,
+a[title="Contact"]:before {
+  content: "\f172";
 }
 
 /*--- Account Link ---*/
@@ -111,11 +118,15 @@ a[href*="/user/logout"]:before {
 /*  Main Section Icons
 /*--------------------------------------------*/
 .block-navigation li > a:before {
-  color: #797e80;
   font-family: "foundation-icons";
   font-weight: bold;
   position: relative;
   margin-right: 8px;
   top: 2px;
   content: "\f198";
+}
+
+.breadcrumbs a:after,
+.breadcrumbs a:before {
+  content: "";
 }

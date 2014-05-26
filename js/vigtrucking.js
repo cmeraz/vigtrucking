@@ -6,4 +6,6 @@
     }
   };
 
+  //$(.colorbox).colorbox();
+
 })(jQuery, Drupal);

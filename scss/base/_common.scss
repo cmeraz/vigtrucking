@@ -5,3 +5,18 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+@include font-face(
+  "Open Sans", font-files(
+    "../fonts/open-sans/OpenSans-Bold.ttf", 
+    "../fonts/open-sans/OpenSans-BoldItalic.ttf",
+    "../fonts/open-sans/OpenSans-ExtraBold.ttf",
+    "../fonts/open-sans/OpenSans-ExtraBoldItalic.ttf",
+    "../fonts/open-sans/OpenSans-Italic.ttf",
+    "../fonts/open-sans/OpenSans-Light.ttf",
+    "../fonts/open-sans/OpenSans-LightItalic.ttf",
+    "../fonts/open-sans/OpenSans-Regular.ttf",
+    "../fonts/open-sans/OpenSans-Semibold.ttf",
+    "../fonts/open-sans/OpenSans-SemiboldItalic.ttf"
+    )
+  );

@@ -58,7 +58,7 @@ scripts[] = js/foundation.min.js
 ;scripts[] = js/foundation/foundation.placeholder.js
 ;scripts[] = js/foundation/foundation.reveal.js
 ;scripts[] = js/foundation/foundation.section.js
-;scripts[] = js/foundation/foundation.tooltips.js
+scripts[] = js/foundation/foundation.tooltips.js
 ;scripts[] = js/foundation/foundation.topbar.js
 
 ; Theme scripts.

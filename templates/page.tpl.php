@@ -114,7 +114,7 @@
                 </strong>
               </div>
             <?php else: /* Use h1 when the content title is empty */ ?>
-              <h1 id="site-name">
+              <h1 id="site-name" class="element-invisible">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
                   <span><?php print $site_name; ?></span>
                 </a>
@@ -247,8 +247,9 @@
       </section>
       <!--/.triptych -->
     <?php endif; ?>
-
-  <?php print render($page['content']); ?>
+    
+    <?php print render($page['content']); ?>
+    
   </div>
   <!--/.main region -->
 

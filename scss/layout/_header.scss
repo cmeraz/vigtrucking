@@ -1,14 +1,13 @@
 // Variables
-$border-nav: 1px solid lighten(gray, 35%);
+$border-nav: 1px solid #ddd;
 
 // Non-modular or client styles for .l-header region.
 
-.l-header {
-	padding-top: emCalc(8px);
-}
+.l-header {}
 
-// Top Bar
-//--------------------------------------------------
+/*--------------------------------------------*/
+/*  Topbar
+/*--------------------------------------------*/
 .top-bar {
   .title-area {}
 }
@@ -17,35 +16,50 @@ $border-nav: 1px solid lighten(gray, 35%);
 .top-bar-section .left {}
 .top-bar-section .right {}
 
-// Header
-//--------------------------------------------------
-
-.language-switcher-locale-url {
-  @include inline-list;
-}
-
+/*--------------------------------------------*/
+/*  Header section elements
+/*--------------------------------------------*/
 header {
-  color: #fff;
-  margin-bottom: $global-margin * 2;
-  height: emCalc(500px);
-  background: url("../images/highway.jpg") center;
+  color: rgba(#fff, 0.9);
+  height: emCalc(600px);
+  background: url("../images/header-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  @media #{$small-only} {
+   background: url("../images/smallbs-bg.jpg") no-repeat center center;
+ }
 }
 
+/*--------------------------------------------*/
+/*  Languaje selectors
+/*--------------------------------------------*/
 .language-switcher-locale-url {
   position: relative;
+  @include inline-list;
 
   a {
-    color: #FFF;
-    border: 1px solid white;
+    color: #f25c24;
+    font-weight: 300;
+    border: 1px solid #f25c24;
     padding: emCalc(8px);
-    @include border-radius;
+    @include border-radius(3px);
     @include transition-property(all);
     @include transition-duration(800ms);
 
     &:hover {
+      color: #fff;
       background-color: #f25c24;
       background-color: rgba(#f25c24, 0.75);
+      border: 1px solid #fff;
     }
+  }
+  
+  /*--- Active state of the languaje link ---*/
+  .active a {
+      color: #fff;
+      background-color: #f25c24;
+      background-color: rgba(#f25c24, 0.75);
+      border: 1px solid #fff;
   }
 /*
   .es a:before {
@@ -59,59 +73,96 @@ header {
     @include icons-sprite(mexico);
   }
 */
+
+ @media #{$small-only} {
+   margin: 0 auto;
+ }
+}
+
+/*--------------------------------------------*/
+/*  Contact Info section
+/*--------------------------------------------*/
+
+.inline-list > li {
+  margin-left: emCalc(8);
+}
+
+#contact-info {
+  padding-top: emCalc($global-margin * 2);
+
+  @media #{$small-only} {
+    text-aling: center;
+  }
 }
 
 .contact-lines {
+  font-family: $header-font-family;
   font-size: emCalc(20px);
   font-weight: bold;
+  letter-spacing: -0.03143em;
   @include text-shadow;
+
+  i {
+    font-size: emCalc(24);
+    position:relative;
+    top: -12px;
+  }
+  
+  @media #{$small-only} {
+    margin-top: emCalc($global-margin);
+    font-size: emCalc(14);
+  }
+
 }
 
+/*--------------------------------------------*/
+/*  Navigation menu links
+/*--------------------------------------------*/
 #navigation {
   @extend .box-shadow;
+  background-color: #fff;
   padding: emCalc($global-margin) 0;
   margin: emCalc($global-margin) 0;
   border-top: $border-nav;
   border-bottom: $border-nav;
-  @include opacity(0.9);
 
-  .li {
-    padding: emCalc($global-margin);
+  li {
+    padding: 0;
+    margin: 0 emCalc(5px);
   }
-}
 
-nav {
-   text-align: right;
-   // Position the links aligned in place
-  .links{
-    text-align: right;
-    display: block;
-    float: left;
-    margin-right: emCalc($global-margin + 5);
-
-      a {
-        font-size: emCalc(16px);
-        color: black;
-        padding: emCalc($global-margin - 5) emCalc(15px);
-        @include transition(background-color 0.3s);
-        @include border-radius(8px);
-
-        &:hover {
-          color: #fff;
-          background-color: lighten($primary-color, 25%);
-        }
-      }
-  }
-  
-  // Sets position and margin top
-  #main-menu-links,
-  #secondary-menu-links {
+  /*--- links ul elements ---*/
+  .links {
     position: relative;
-    top: emCalc($global-margin * 2);
+    float: left;
+    top: emCalc(15px);   
   }
 
+  .links a {
+    color: #444;
+    font-weight: normal;
+    padding: 0.5em 0.8em;
+    border: 1px solid #ddd;
+    @include transition(background-color 0.5s);
+    @include border-radius(3px);
+
+    &:hover {
+      color: #fff;
+      background-color: lighten($primary-color, 25%);
+      border: 1px solid #444;
+    }
+
+    &:hover:before {
+      color: #444;
+    }
+  }
 }
 
+/*--------------------------------------------*/
+/*  Featured blocks elements
+/*--------------------------------------------*/
 #featured {
-  border-top: $border-nav;
+  @extend .box-shadow;
+  background-color: #fff;
+  border: none;
 }
