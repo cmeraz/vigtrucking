@@ -93,8 +93,8 @@ $body-font-style: normal;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-$secondary-color: #5DACE9;
+$primary-color: #ad0404; //#2ba6cb;
+$secondary-color: #ad0404; //#5DACE9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -139,16 +139,17 @@ $secondary-color: #5DACE9;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-// $large-screen: 1440px;
+$small-screen: 768px;
+$medium-screen: 1280px;
+$large-screen: 1440px;
 
-// $screen: "only screen";
-// $small: "only screen and (min-width: #{$small-screen})";
-// $medium: "only screen and (min-width: #{$medium-screen})";
-// $large: "only screen and (min-width: #{$large-screen})";
-// $landscape: "only screen and (orientation: landscape)";
-// $portrait: "only screen and (orientation: portrait)";
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$small-only: "only screen and (max-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
 
 //// Cursors
 
@@ -186,10 +187,10 @@ $total-columns: 12;
 
 // Control header font styles
 
-$header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: bold;
-$header-font-style: italic;
-$header-font-color: #4f5e62;
+$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; //"Open Sans" deleted.
+// $header-font-weight: bold;
+// $header-font-style: italic;
+$header-font-color: #333;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -197,11 +198,11 @@ $header-font-color: #4f5e62;
 
 // Control header font sizes
 
-$h1-font-size: emCalc(36);
-$h2-font-size: emCalc(28);
-$h3-font-size: emCalc(24);
-$h4-font-size: emCalc(20);
-$h5-font-size: emCalc(16);
+$h1-font-size: emCalc(28);
+$h2-font-size: emCalc(24);
+$h3-font-size: emCalc(20);
+$h4-font-size: emCalc(18);
+$h5-font-size: emCalc(14);
 $h6-font-size: 1em;
 
 // Control how subheaders are styled.
@@ -389,7 +390,7 @@ $small-font-color: darken(#f25c24, 15%);
 // $button-font-tny: emCalc(11);
 // $button-font-sml: emCalc(13);
 // $button-font-lrg: emCalc(20);
-// $button-font-weight: bold;
+$button-font-weight: normal;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
@@ -722,7 +723,7 @@ $button-function-factor: 20%;
 $inline-list-top-margin: 0;
 $inline-list-opposite-margin: 0;
 $inline-list-bottom-margin: emCalc(17);
-$inline-list-default-float-margin: emCalc(-50);
+$inline-list-default-float-margin: emCalc(-22);
 
 $inline-list-padding: 0;
 
