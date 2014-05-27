@@ -6,8 +6,8 @@ $global-margin: 10px;
 
 // Optionally, you can add your colors here.
 // ******************************************************
-// $primary-color: #000;
-// $secondary-color: #c00;
+ $primary-color: #000;
+ $secondary-color: #c00;
 
 
 // Font Families
@@ -401,6 +401,8 @@ $button-function-factor: 20%;
 
 // $button-border-width: 1px;
 // $button-border-style: solid;
+$button-border-width: 0px;
+$button-border-style: none;
 
 // We use this to set the default radius used throughout the core.
 
