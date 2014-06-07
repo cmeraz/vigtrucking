@@ -6,8 +6,8 @@ $global-margin: 10px;
 
 // Optionally, you can add your colors here.
 // ******************************************************
- $primary-color: #000;
- $secondary-color: #c00;
+ //$primary-color: #000;
+// $secondary-color: #c00;
 
 
 // Font Families
@@ -164,7 +164,7 @@ $portrait: "only screen and (orientation: portrait)";
 // Grid Variables
 //
 
-$row-width: emCalc(1200);
+$row-width: 95%;  //emCalc(1200);
 $column-gutter: emCalc(30);
 $total-columns: 12;
 
