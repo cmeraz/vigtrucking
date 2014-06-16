@@ -182,13 +182,13 @@
     </div>
   <?php endif; ?>    
       
-  <!-- breadcumbs -->
+  <!-- breadcumbs 
   <?php if ($breadcrumb): ?>
     <div class="large-12 column">
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
     </div>
   <?php endif ?>
-
+  -->
 </section>
 
 <!-- main content -->
