@@ -22,11 +22,12 @@ $border-nav: 1px solid #ddd;
 header {
   color: rgba(#fff, 0.9);
   height: emCalc(600px);
-  background: url("../images/header-bg.jpg") no-repeat center center;
+  background: url("../images/background_blur.jpg") no-repeat center fixed;
   background-size: cover;
 
   @media #{$small-only} {
-   background: url("../images/smallbs-bg.jpg") no-repeat center center;
+   background: url("../images/smallbs-bg.jpg") no-repeat center fixed;
+   background-size: cover;
  }
 }
 
