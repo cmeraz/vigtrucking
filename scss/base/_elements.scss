@@ -82,16 +82,11 @@ a:hover {
 /*  Site Title
 /*--------------------------------------------*/
 .site-slogan {
-  background-color: rgba($primary-color, 0.8);
-  margin: emCalc($global-margin) auto;
-  padding: emCalc(3);
-  width: emCalc(250);
-}
-.site-slogan {
-  font-size: emCalc(38);
+  font-size: emCalc(54);
   color: #fff;
   text-align: center;
-  background-color: rgba($primary-color, 0.8);
+  text-transform: uppercase;
+  //background-color: rgba($primary-color, 0.8);
   margin: emCalc($global-margin) auto;
   padding: emCalc(3);
   width: emCalc(295);
