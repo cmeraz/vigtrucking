@@ -1,4 +1,4 @@
-// Declare all the Gulp.js plugins necesseary.
+// Load plugins
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     jshint = require ('gulp-jshint'),
@@ -12,9 +12,25 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     notify = require('gulp-notify');
 
-// SASS task
-gulp.task('sass', function () {
-  return gulp.src('scss/vigtrucking.scss')
-  .pipe(sass({ style: 'compressed', compass: true, }))
-  .pipe(gulp.dest('css'));
+// Styles
+gulp.task('styles', function () {
+  var css_path = 'css'
+  return gulp.src('src/scss/vigtrucking.scss')
+  .pipe(sass({ 
+    style: 'expanded', compass: true 
+  }))
+  .pipe(gulp.dest('css'))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(minifycss())
+  .pipe(gulp.dest('css'))
+  .pipe(notify({message: 'SASS and CSS task complete.'}));
 });
+
+// Images
+gulp.task('images', function() {
+  return gulp.src('src/img/**/*')
+  .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+  .pipe(gulp.dest('images'))
+  .pipe(notify({message: 'Images were all optimized.'}));
+});
+
