@@ -29,7 +29,7 @@ base theme = zurb_foundation
 ; For CSS users, load the app.css file:
 ; stylesheets[all][] = css/app.css
 ; Comment the app.css file (above) if you're using sass to preprocess css:
-stylesheets[all][] = css/vigtrucking.css
+stylesheets[all][] = css/vigtrucking.min.css
 stylesheets[all][] = css/foundation-icons.css
 
 ; Foundation JavaScript.
