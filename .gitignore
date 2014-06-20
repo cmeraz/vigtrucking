@@ -41,6 +41,3 @@ xmlrpc.php
 /scripts
 /themes
 >>>>>>> 9021754d1bb7ace987110dd6eb4c7b0d9ec941de
-
-# Ignore the nodejs gulp files
-node_modules/
